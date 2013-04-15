@@ -1,0 +1,54 @@
+<script src="http://js.pusher.com/2.0/pusher.min.js"></script>
+<script>
+var pusher = new Pusher('6c324456aa8edff9ea6c');
+var channel = pusher.subscribe('my-channel');
+channel.bind('my-event', function(data) {
+  alert('An event was triggered with message: ' + data.message);
+});
+</script>
+
+
+<!-- <form class="new_question" id="new_question" method="post">
+  <div style="margin:0;padding:0;display:inline"> 
+  </div>
+
+  <label for="question">ASK YOUR QUESTION</label>
+  <input name="question" size="300" type="text" /><br />
+
+  <input name="commit" type="submit" value="Create question" id="submit_question" />
+</form> -->
+
+<script>
+
+var unique_id = $.gritter.add({
+	// (string | mandatory) the heading of the notification
+	title: 'Hey, I have a question!',
+	// (string | mandatory) the text inside the notification
+	text: 'Type your question here.',
+	// (string | optional) the image to display on the left
+	image: '<%= @user.gravatar_url %>',
+	// (bool | optional) if you want it to fade out on its own or just sit there
+	sticky: true
+});
+
+
+</script>
+
+
+
+
+<script>
+$(function (){
+	var question = $('#question');
+	var greeting = $('#greeting');
+
+	question.on("keyup",(function () {
+		$(".gritter-with-image p").text(question.val() );
+	}))
+})
+ 	
+</script>
+
+	<input id="question" type='text'>
+	<h2 id="greeting"></h2>
+

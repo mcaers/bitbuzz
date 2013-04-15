@@ -1,0 +1,20 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <div class="span1"></div>
+      <a class="brand" href="#">BitBuzz</a>
+      <li><a href="/">Home</a></li>
+      <li><a href="/buzzers">Buzzer</a></li>
+      <li><a href="/survey_entries">Survey</a></li>
+    </ul>
+
+    <div class="pull-right">
+        <% if user_signed_in? %>
+          <%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: 'btn' %>
+        <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary' %>
+          <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-success' %>
+        <% end %>
+      </div>
+  </div>
+</div>

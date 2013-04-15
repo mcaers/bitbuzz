@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+ 
+  <title>BitBuzz</title>
+
+  
+</head>
+
+<h2>Real Time Student Feedback Application</h2>
+<p> Welcome to BitBuzz! This is a real-time student feedback application. With this app you will be able to notify the instructor if concepts are unclear or if you have questions. You will also be able to complete a survey in real time to poll the class at key points before, during or after class. </p>
+<br>
+
+ 
+<h3>Class List</h3>
+   <br>
+
+	<% for user in @users %>
+  
+    
+<%=  image_tag user.gravatar_url %>
+
+ <% end %>
